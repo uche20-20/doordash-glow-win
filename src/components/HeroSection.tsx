@@ -36,7 +36,7 @@ export function HeroSection() {
         {/* Urgency Text */}
         <div className="pt-4">
           <p className="text-white/80 text-lg font-semibold animate-pulse">
-            ⚡ Only 47 spots remaining today!
+            ⚡ Hurry up offer closing soon!
           </p>
         </div>
       </div>
