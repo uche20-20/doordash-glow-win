@@ -9,24 +9,24 @@
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
-    /* DoorDash Brand Colors */
-    --doordash-red: 14 100% 57%;
-    --doordash-orange: 36 100% 50%;
+    /* DoorDash Brand Colors - Official Reds Only */
+    --doordash-red: 11 100% 52%;      /* #FF3008 */
+    --doordash-red-dark: 349 78% 42%; /* #C8102E */
     --doordash-white: 0 0% 100%;
     
     /* Primary Colors */
-    --primary: 14 100% 57%;
+    --primary: 11 100% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 14 100% 67%;
+    --primary-glow: 11 100% 62%;
 
-    /* Secondary Colors */
-    --secondary: 36 100% 50%;
+    /* Secondary Colors - Using darker red instead of orange */
+    --secondary: 349 78% 42%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 36 100% 60%;
+    --secondary-glow: 349 78% 52%;
 
-    /* Background Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--doordash-red)), hsl(var(--doordash-orange)), hsl(var(--doordash-white)));
-    --gradient-hero: linear-gradient(180deg, hsl(var(--doordash-red) / 0.9) 0%, hsl(var(--doordash-orange) / 0.8) 50%, hsl(var(--doordash-white) / 0.9) 100%);
+    /* Background Gradients - Red spectrum only */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--doordash-red)), hsl(var(--doordash-red-dark)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--doordash-red)) 0%, hsl(var(--doordash-red-dark)) 100%);
     --gradient-glow: radial-gradient(circle at center, hsl(var(--primary-glow) / 0.3) 0%, transparent 70%);
 
     /* Card & Components */
@@ -40,7 +40,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 36 100% 50%;
+    --accent: 349 78% 52%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;

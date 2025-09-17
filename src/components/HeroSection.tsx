@@ -12,13 +12,13 @@ export function HeroSection() {
         <div className="space-y-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
             Win a{" "}
-            <span className="bg-gradient-to-r from-doordash-orange to-yellow-300 bg-clip-text text-transparent animate-shimmer bg-300%">
+            <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent animate-shimmer bg-300%">
               $500 DoorDash
             </span>{" "}
             Gift Card 🍔🚗
           </h1>
           <p className="text-xl md:text-2xl text-white/90 font-medium max-w-2xl mx-auto">
-            Enjoy free meals & delivery — limited spots available!
+            Enjoy free meals and delivery on us — limited spots available!
           </p>
         </div>
 
@@ -27,7 +27,7 @@ export function HeroSection() {
           <Button
             onClick={handleCTAClick}
             size="lg"
-            className="text-2xl md:text-3xl px-12 py-6 md:px-16 md:py-8 bg-gradient-to-r from-primary to-secondary text-white font-black rounded-2xl glow-intense hover:scale-105 animate-glow-pulse transition-all duration-300 shadow-floating"
+            className="text-2xl md:text-3xl px-12 py-6 md:px-16 md:py-8 bg-primary text-white font-black rounded-2xl glow-intense hover:scale-105 hover:glow-primary animate-glow-pulse transition-all duration-300 shadow-floating"
           >
             🎁 Claim My $500 Now
           </Button>

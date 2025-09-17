@@ -4,19 +4,19 @@ const steps = [
   {
     icon: <Star className="w-8 h-8" />,
     title: "Take the Survey",
-    description: "Answer a few quick questions about DoorDash.",
+    description: "Answer a few quick questions about your DoorDash experience",
     color: "text-primary",
   },
   {
     icon: <CheckCircle className="w-8 h-8" />,
     title: "Complete 3–5 Deals",
-    description: "Unlock your eligibility.",
+    description: "Unlock your eligibility",
     color: "text-secondary",
   },
   {
     icon: <Gift className="w-8 h-8" />,
     title: "Get Rewarded",
-    description: "Receive $500 DoorDash credit instantly.",
+    description: "Receive your $500 DoorDash Credit",
     color: "text-primary",
   },
 ];
@@ -27,9 +27,9 @@ export function StepsSection() {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-            3 Easy Steps to Your{" "}
+            How to Claim Your{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              $500 Reward
+              $500 DoorDash Reward
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">

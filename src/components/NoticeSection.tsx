@@ -20,13 +20,12 @@ export function NoticeSection() {
             
             <div className="space-y-4">
               <p className="text-lg md:text-xl font-semibold text-gray-800 leading-relaxed">
-                ⚠️ Available only in{" "}
-                <span className="text-primary font-black">US, CA, UK, AU</span>.
+                ⚠️ Available only to residents of the{" "}
+                <span className="text-primary font-black">United States, Canada, United Kingdom, and Australia</span>.
               </p>
               
               <p className="text-lg md:text-xl font-semibold text-gray-800 leading-relaxed">
-                Limited spots —{" "}
-                <span className="text-secondary font-black animate-pulse">act fast</span>.
+                <span className="text-secondary font-black animate-pulse">Hurry up — offer closing soon!</span>
               </p>
               
               <div className="pt-4 border-t border-gray-200">

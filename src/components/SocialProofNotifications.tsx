@@ -12,10 +12,9 @@ interface Notification {
 const notifications: Notification[] = [
   { id: "1", name: "Samantha", location: "California", message: "just claimed $500 DoorDash gift card" },
   { id: "2", name: "Brian", location: "Texas", message: "secured his $500 DoorDash reward" },
-  { id: "3", name: "Emily", location: "New York", message: "unlocked $500 DoorDash credit" },
-  { id: "4", name: "Michael", location: "Florida", message: "won $500 DoorDash gift card" },
-  { id: "5", name: "Sarah", location: "Illinois", message: "claimed her $500 DoorDash reward" },
-  { id: "6", name: "David", location: "Washington", message: "received $500 DoorDash credit" },
+  { id: "3", name: "Emily", location: "New York", message: "completed her deals and unlocked $500 DoorDash" },
+  { id: "4", name: "James", location: "Florida", message: "just claimed $500 DoorDash gift card" },
+  { id: "5", name: "Sarah", location: "Illinois", message: "secured her $500 DoorDash reward" },
 ];
 
 export function SocialProofNotifications() {
@@ -29,10 +28,10 @@ export function SocialProofNotifications() {
       setCurrentNotification(randomNotification);
       setIsVisible(true);
       
-      // Hide after 4 seconds
+      // Hide after 5 seconds (show 5s as requested)
       setTimeout(() => {
         setIsVisible(false);
-      }, 4000);
+      }, 5000);
       
       // Update index for next notification
       setNotificationIndex((prev) => (prev + 1) % notifications.length);
@@ -46,7 +45,7 @@ export function SocialProofNotifications() {
       if (!isVisible) {
         showNotification();
       }
-    }, Math.random() * 2000 + 6000); // 6-8 seconds
+    }, Math.random() * 2000 + 8000); // 8-10 seconds (hide 8s as requested)
 
     return () => {
       clearTimeout(initialTimeout);
