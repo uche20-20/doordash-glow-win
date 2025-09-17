@@ -168,3 +168,19 @@
     @apply bg-background text-foreground overflow-x-hidden;
   }
 }
+
+/* Hide Lovable watermark */
+iframe[src*="lovable"] {
+  display: none !important;
+}
+
+div[class*="lovable"] {
+  display: none !important;
+}
+
+a[href*="lovable.dev"],
+button[class*="lovable"],
+div[data-lovable],
+[class*="edit-in-lovable"] {
+  display: none !important;
+}

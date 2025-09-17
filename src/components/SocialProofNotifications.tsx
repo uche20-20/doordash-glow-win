@@ -28,10 +28,10 @@ export function SocialProofNotifications() {
       setCurrentNotification(randomNotification);
       setIsVisible(true);
       
-      // Hide after 5 seconds (show 5s as requested)
+      // Hide after 8 seconds
       setTimeout(() => {
         setIsVisible(false);
-      }, 5000);
+      }, 8000);
       
       // Update index for next notification
       setNotificationIndex((prev) => (prev + 1) % notifications.length);
@@ -40,12 +40,12 @@ export function SocialProofNotifications() {
     // Show first notification after 2 seconds
     const initialTimeout = setTimeout(showNotification, 2000);
     
-    // Then show every 6-8 seconds
+    // Then show every 20 seconds (8s show + 12s hide)
     const interval = setInterval(() => {
       if (!isVisible) {
         showNotification();
       }
-    }, Math.random() * 2000 + 8000); // 8-10 seconds (hide 8s as requested)
+    }, 20000);
 
     return () => {
       clearTimeout(initialTimeout);
