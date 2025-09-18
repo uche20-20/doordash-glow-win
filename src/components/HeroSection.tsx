@@ -29,7 +29,7 @@ export function HeroSection() {
             size="lg"
             className="text-2xl md:text-3xl px-12 py-6 md:px-16 md:py-8 bg-primary text-white font-black rounded-2xl glow-intense hover:scale-105 hover:glow-primary animate-glow-pulse transition-all duration-300 shadow-floating"
           >
-            🎁 Claim My $500 Now
+            🎁 Start Now
           </Button>
         </div>
 
