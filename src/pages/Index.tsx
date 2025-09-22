@@ -1,6 +1,6 @@
 import { HeroSection } from "@/components/HeroSection";
 import { StepsSection } from "@/components/StepsSection";
-import { EntryFormSection } from "@/components/EntryFormSection";
+import { SocialSharingSection } from "@/components/SocialSharingSection";
 import { SocialProofNotifications } from "@/components/SocialProofNotifications";
 import { FooterSection } from "@/components/FooterSection";
 
@@ -10,7 +10,7 @@ const Index = () => {
       {/* Main Content */}
       <HeroSection />
       <StepsSection />
-      <EntryFormSection />
+      <SocialSharingSection />
       <FooterSection />
       
       {/* Interactive Elements */}
