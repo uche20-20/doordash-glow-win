@@ -10,11 +10,10 @@ interface Notification {
 }
 
 const notifications: Notification[] = [
-  { id: "1", name: "Samantha", location: "California", message: "just claimed $500 DoorDash gift card" },
-  { id: "2", name: "Brian", location: "Texas", message: "secured his $500 DoorDash reward" },
-  { id: "3", name: "Emily", location: "New York", message: "completed her deals and unlocked $500 DoorDash" },
-  { id: "4", name: "James", location: "Florida", message: "just claimed $500 DoorDash gift card" },
-  { id: "5", name: "Sarah", location: "Illinois", message: "secured her $500 DoorDash reward" },
+  { id: "1", name: "Samantha", location: "", message: "unlocked $750!" },
+  { id: "2", name: "Brian", location: "TX", message: "entered!" },
+  { id: "3", name: "Emily", location: "", message: "got $750 confirmed!" },
+  { id: "4", name: "Olivia", location: "", message: "'s $750 pending!" },
 ];
 
 export function SocialProofNotifications() {
@@ -28,10 +27,10 @@ export function SocialProofNotifications() {
       setCurrentNotification(randomNotification);
       setIsVisible(true);
       
-      // Hide after 8 seconds
+      // Hide after 6 seconds
       setTimeout(() => {
         setIsVisible(false);
-      }, 8000);
+      }, 6000);
       
       // Update index for next notification
       setNotificationIndex((prev) => (prev + 1) % notifications.length);
@@ -40,12 +39,12 @@ export function SocialProofNotifications() {
     // Show first notification after 2 seconds
     const initialTimeout = setTimeout(showNotification, 2000);
     
-    // Then show every 20 seconds (8s show + 12s hide)
+    // Then show every 10 seconds (6s show + 4s hide)
     const interval = setInterval(() => {
       if (!isVisible) {
         showNotification();
       }
-    }, 20000);
+    }, 10000);
 
     return () => {
       clearTimeout(initialTimeout);
@@ -60,23 +59,25 @@ export function SocialProofNotifications() {
   if (!currentNotification || !isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 max-w-sm">
-      <div className="animate-slide-in-left bg-white rounded-lg shadow-floating glow-primary p-4 border border-primary/20">
+    <div className="fixed bottom-4 left-4 z-50 w-72 md:w-80">
+      <div className="animate-slide-in-left bg-gradient-to-r from-red-500 to-red-600 rounded-lg shadow-lg p-4 border" style={{ background: 'linear-gradient(135deg, #FF3008, #E02A00)' }}>
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <div className="flex items-center space-x-2 mb-1">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-semibold text-gray-900">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-sm font-semibold text-white">
                 {currentNotification.name}
               </span>
-              <span className="text-xs text-gray-500">
-                from {currentNotification.location}
-              </span>
+              {currentNotification.location && (
+                <span className="text-xs text-white/80">
+                  from {currentNotification.location}
+                </span>
+              )}
             </div>
-            <p className="text-sm text-gray-700 font-medium">
+            <p className="text-sm text-white font-medium">
               {currentNotification.message}
             </p>
-            <span className="text-xs text-gray-500 mt-1 block">
+            <span className="text-xs text-white/80 mt-1 block">
               Just now
             </span>
           </div>
@@ -84,9 +85,9 @@ export function SocialProofNotifications() {
             variant="ghost"
             size="sm"
             onClick={handleClose}
-            className="p-1 h-auto hover:bg-gray-100"
+            className="p-1 h-auto hover:bg-white/20 text-white"
           >
-            <X className="h-4 w-4 text-gray-400" />
+            <X className="h-4 w-4" style={{ color: '#FF3008' }} />
           </Button>
         </div>
       </div>

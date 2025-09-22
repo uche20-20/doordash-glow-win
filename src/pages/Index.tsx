@@ -1,19 +1,17 @@
 import { HeroSection } from "@/components/HeroSection";
 import { StepsSection } from "@/components/StepsSection";
-import { NoticeSection } from "@/components/NoticeSection";
+import { EntryFormSection } from "@/components/EntryFormSection";
 import { SocialProofNotifications } from "@/components/SocialProofNotifications";
-import { FloatingParticles } from "@/components/FloatingParticles";
+import { FooterSection } from "@/components/FooterSection";
 
 const Index = () => {
   return (
     <main className="relative">
-      {/* Background Elements */}
-      <FloatingParticles />
-      
       {/* Main Content */}
       <HeroSection />
       <StepsSection />
-      <NoticeSection />
+      <EntryFormSection />
+      <FooterSection />
       
       {/* Interactive Elements */}
       <SocialProofNotifications />

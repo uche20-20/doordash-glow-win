@@ -1,50 +1,84 @@
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
+import heroImage from "@/assets/food-delivery-hero.jpg";
 
 export function HeroSection() {
+  const [timeLeft, setTimeLeft] = useState({ days: 5, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(prev => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else if (prev.minutes > 0) {
+          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
+        } else if (prev.hours > 0) {
+          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
+        } else if (prev.days > 0) {
+          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
+        }
+        return prev;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const handleCTAClick = () => {
-    window.open("https://rewarrdsgiant.com/aff_c?offer_id=455&aff_id=31368", "_blank");
+    window.open("https://rewarrdsgiant.com/aff_c?offer_id=1164&aff_id=31368", "_blank");
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 gradient-hero">
-      <div className="container max-w-4xl mx-auto text-center space-y-8 relative z-10">
+    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Image Background */}
+      <div className="absolute inset-0 opacity-20">
+        <img 
+          src={heroImage} 
+          alt="Food delivery" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
+      </div>
+
+      <div className="container max-w-4xl mx-auto text-center space-y-6 relative z-10">
+        {/* $750 Sweepstakes Badge */}
+        <div className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-black px-6 py-2 rounded-full text-lg animate-pulse shadow-lg">
+          🏆 $750 SWEEPSTAKES 🏆
+        </div>
+
         {/* Hero Headline */}
         <div className="space-y-4">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
-            Win a{" "}
-            <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent animate-shimmer bg-300%">
-              $500 DoorDash
-            </span>{" "}
-            Gift Card 🍔🚗
+          <h1 className="text-3xl md:text-5xl font-black leading-tight" style={{ color: '#FF3008' }}>
+            Win a $750 DoorDash Voucher!
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 font-medium max-w-2xl mx-auto">
-            Enjoy free meals and delivery on us — limited spots available!
+          <p className="text-base md:text-lg text-white/90 font-medium max-w-2xl mx-auto">
+            Grab $750 for your favorite meals!
           </p>
         </div>
 
         {/* CTA Button */}
-        <div className="pt-8">
+        <div className="pt-4">
           <Button
             onClick={handleCTAClick}
-            size="lg"
-            className="text-2xl md:text-3xl px-12 py-6 md:px-16 md:py-8 bg-primary text-white font-black rounded-2xl glow-intense hover:scale-105 hover:glow-primary animate-glow-pulse transition-all duration-300 shadow-floating"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-black text-lg px-8 py-6 h-auto rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg"
           >
-            🎁 Start Now
+            Start Now
           </Button>
         </div>
 
-        {/* Urgency Text */}
-        <div className="pt-4">
-          <p className="text-white/80 text-lg font-semibold animate-pulse">
-            ⚡ Hurry up offer closing soon!
+        {/* Countdown Timer */}
+        <div className="pt-2">
+          <p className="text-white text-lg font-semibold">
+            ⏰ {timeLeft.days} days left!
           </p>
         </div>
-      </div>
 
-      {/* Background Glow Effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
+        {/* Eligibility */}
+        <div className="pt-2">
+          <p className="text-white/70 text-xs">
+            US, CA, UK, AU, 18+.
+          </p>
+        </div>
       </div>
     </section>
   );

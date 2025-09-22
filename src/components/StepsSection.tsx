@@ -1,85 +1,81 @@
-import { CheckCircle, Gift, Star } from "lucide-react";
+import { Check, Gift, Tag } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const steps = [
   {
-    icon: <Star className="w-8 h-8" />,
-    title: "Take the Survey",
-    description: "Answer a few quick questions about your DoorDash experience",
-    color: "text-primary",
+    icon: Check,
+    title: "Survey",
+    description: "Quick food survey.",
+    color: "text-green-500"
   },
   {
-    icon: <CheckCircle className="w-8 h-8" />,
-    title: "Complete 3–5 Deals",
-    description: "Unlock your eligibility",
-    color: "text-secondary",
+    icon: Tag,
+    title: "3-5 Deals", 
+    description: "Sign up for offers.",
+    color: "text-blue-500"
   },
   {
-    icon: <Gift className="w-8 h-8" />,
-    title: "Get Rewarded",
-    description: "Receive your $500 DoorDash Credit",
-    color: "text-primary",
-  },
+    icon: Gift,
+    title: "Reward",
+    description: "Get $750 voucher!",
+    color: "text-purple-500"
+  }
 ];
 
 export function StepsSection() {
+  const handleCTAClick = () => {
+    window.open("https://rewarrdsgiant.com/aff_c?offer_id=1164&aff_id=31368", "_blank");
+  };
+
   return (
-    <section className="py-20 px-4 bg-white relative">
+    <section className="py-16 px-4 bg-white">
       <div className="container max-w-6xl mx-auto">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-            How to Claim Your{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              $500 DoorDash Reward
-            </span>
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-4xl font-black mb-4" style={{ color: '#FF3008' }}>
+            Get $750 in &lt;5 Mins!
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            It takes less than 5 minutes to qualify for your DoorDash gift card
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="text-center space-y-6 group hover:scale-105 transition-all duration-300"
-            >
-              {/* Step Number */}
-              <div className="relative">
-                <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-3xl font-black text-white shadow-glow group-hover:glow-intense transition-all duration-300">
-                  {index + 1}
+        {/* Steps Grid */}
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          {steps.map((step, index) => {
+            const IconComponent = step.icon;
+            return (
+              <div key={index} className="relative">
+                {/* Step Card */}
+                <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border">
+                  {/* Step Number */}
+                  <div className="flex items-center justify-center w-10 h-10 bg-red-500 text-white rounded-full font-black text-lg mb-4 mx-auto">
+                    {index + 1}
+                  </div>
+                  
+                  {/* Icon */}
+                  <div className="flex justify-center mb-4">
+                    <IconComponent className={`w-8 h-8 ${step.color}`} />
+                  </div>
+                  
+                  {/* Content */}
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-center text-sm">
+                    {step.description}
+                  </p>
                 </div>
-                {/* Connecting Line */}
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 left-full w-full h-1 bg-gradient-to-r from-primary/50 to-secondary/50 transform -translate-y-1/2"></div>
-                )}
               </div>
-
-              {/* Icon */}
-              <div className={`${step.color} flex justify-center`}>
-                {step.icon}
-              </div>
-
-              {/* Content */}
-              <div className="space-y-3">
-                <h3 className="text-2xl font-bold text-gray-900">{step.title}</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="inline-block bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6 shadow-glow">
-            <p className="text-lg font-semibold text-gray-800 mb-2">
-              🎯 Average completion time: <span className="text-primary font-black">3 minutes</span>
-            </p>
-            <p className="text-gray-600">
-              Join thousands who have already claimed their rewards
-            </p>
-          </div>
+        {/* CTA Section */}
+        <div className="text-center">
+          <Button
+            onClick={handleCTAClick}
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-black text-lg px-8 py-6 h-auto rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg"
+          >
+            Start Now
+          </Button>
         </div>
       </div>
     </section>
