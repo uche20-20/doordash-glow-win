@@ -116,6 +116,30 @@ export default {
           "66%": { transform: "translate(-20px, 20px) rotate(240deg)" },
           "100%": { transform: "translate(0, 0) rotate(360deg)" },
         },
+        "fadeInSlide": {
+          "0%": { 
+            transform: "translateX(-100%) translateY(20px)", 
+            opacity: "0",
+            scale: "0.8"
+          },
+          "100%": { 
+            transform: "translateX(0) translateY(0)", 
+            opacity: "1",
+            scale: "1"
+          },
+        },
+        "fadeOutSlide": {
+          "0%": { 
+            transform: "translateX(0) translateY(0)", 
+            opacity: "1",
+            scale: "1"
+          },
+          "100%": { 
+            transform: "translateX(-100%) translateY(-20px)", 
+            opacity: "0",
+            scale: "0.8"
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -127,6 +151,8 @@ export default {
         "bounce-in": "bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
         "shimmer": "shimmer 2s linear infinite",
         "particle-float": "particle-float 6s ease-in-out infinite",
+        "fadeInSlide": "fadeInSlide 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+        "fadeOutSlide": "fadeOutSlide 2s cubic-bezier(0.55, 0.06, 0.68, 0.19)",
       },
     },
   },
