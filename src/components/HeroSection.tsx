@@ -1,29 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
 import heroImage from "@/assets/food-delivery-hero.jpg";
 
 export function HeroSection() {
-  const [timeLeft, setTimeLeft] = useState({ days: 4, hours: 23, minutes: 59, seconds: 47 });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
   const handleCTAClick = () => {
     window.open("https://rewarrdsgiant.com/aff_c?offer_id=1164&aff_id=31368", "_blank");
   };
@@ -40,15 +18,6 @@ export function HeroSection() {
         <p className="text-base text-gray-600 leading-relaxed">
           Order your favorite meals with a $750 DoorDash credit!
         </p>
-
-        {/* Countdown Timer */}
-        <div className="flex items-center justify-center gap-2 text-lg font-bold">
-          <span style={{ color: '#FF3008' }}>Only</span>
-          <div className="bg-red-500 text-white px-3 py-2 rounded-lg font-black">
-            {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-          </div>
-          <span style={{ color: '#FF3008' }}>left!</span>
-        </div>
 
         {/* CTA Button */}
         <div className="pt-4">
