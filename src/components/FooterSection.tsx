@@ -4,7 +4,7 @@ export function FooterSection() {
       <div className="container max-w-md mx-auto text-center space-y-6">
         {/* Main Footer Text */}
         <p className="text-xs leading-relaxed">
-          US, CA, UK, AU residents, 18+. Ends November 20, 2025. No purchase needed. Void where prohibited. Odds of winning depend on number of eligible entries received. One grand prize winner will be selected.
+          US, CA, UK, AU residents, 18+. Ends December 31, 2025. No purchase needed. Void where prohibited. Odds of winning depend on number of eligible entries received. One grand prize winner will be selected.
         </p>
         
         {/* Footer Links */}
