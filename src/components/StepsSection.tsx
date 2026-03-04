@@ -11,8 +11,8 @@ const steps = [
   },
   {
     icon: Gift,
-    title: "Complete 3-5 Deals", 
-    description: "Sign up for 3-5 offers from our partners.",
+    title: "Complete 4-5 Deals", 
+    description: "Sign up for 4-5 offers from our partners.",
     bgColor: "bg-red-50",
     iconColor: "text-red-500"
   },
