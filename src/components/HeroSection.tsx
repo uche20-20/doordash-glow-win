@@ -3,7 +3,7 @@ import heroImage from "@/assets/food-delivery-hero.jpg";
 
 export function HeroSection() {
   const handleCTAClick = () => {
-    window.open("https://rewarrdsgiant.com/aff_c?offer_id=1164&aff_id=31368", "_blank");
+    window.open("https://trksy.org/aff_c?offer_id=1164&aff_id=31368", "_blank");
   };
 
   return (
