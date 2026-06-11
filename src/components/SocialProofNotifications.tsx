@@ -51,7 +51,7 @@ export function SocialProofNotifications() {
   const [isDisabled, setIsDisabled] = useState(false);
   const [usedNotifications, setUsedNotifications] = useState<Set<string>>(new Set());
   const [notificationCount, setNotificationCount] = useState(0);
-  const [timeouts, setTimeouts] = useState<NodeJS.Timeout[]>([]);
+  const [timeouts, setTimeouts] = useState<any[]>([]);
 
   // Check localStorage on mount to see if notifications are disabled
   useEffect(() => {
