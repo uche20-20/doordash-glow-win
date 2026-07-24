@@ -153,6 +153,9 @@
   .transition-glow {
     transition: var(--transition-glow);
   }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
 }
 
 @layer base {
@@ -160,8 +163,13 @@
     @apply border-border;
   }
 
+  html {
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+
   body {
-    @apply bg-background text-foreground overflow-x-hidden;
+    @apply bg-background text-foreground overflow-x-hidden antialiased;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
   }
 }
 
