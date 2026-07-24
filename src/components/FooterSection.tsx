@@ -1,36 +1,27 @@
 export function FooterSection() {
   return (
-    <footer className="py-8 px-4 bg-gray-800 text-white">
+    <footer className="py-10 px-4 bg-foreground text-background">
       <div className="container max-w-md mx-auto text-center space-y-6">
-        {/* Main Footer Text */}
-        <p className="text-xs leading-relaxed">
+        <p className="text-xs leading-relaxed opacity-80">
           US, CA, UK, AU residents, 18+. Ends July 26, 2026. No purchase needed. Void where prohibited. Odds of winning depend on number of eligible entries received. One grand prize winner will be selected.
         </p>
-        
-        {/* Footer Links */}
-        <div className="flex flex-col gap-2 text-xs">
-          <div className="flex justify-center gap-4">
-            <a href="#" className="text-white hover:text-gray-300 transition-colors">
-              Official Rules
-            </a>
-            <span className="text-gray-500">|</span>
-            <a href="#" className="text-white hover:text-gray-300 transition-colors">
-              Privacy Policy
-            </a>
-            <span className="text-gray-500">|</span>
-            <a href="#" className="text-white hover:text-gray-300 transition-colors">
-              Contact Us
-            </a>
+
+        <div className="flex flex-col gap-3 text-xs">
+          <div className="flex justify-center gap-4 opacity-90">
+            <a href="#" className="hover:opacity-70 transition-opacity">Official Rules</a>
+            <span className="opacity-40">|</span>
+            <a href="#" className="hover:opacity-70 transition-opacity">Privacy Policy</a>
+            <span className="opacity-40">|</span>
+            <a href="#" className="hover:opacity-70 transition-opacity">Contact Us</a>
           </div>
-          
-          <div style={{ color: '#FF3008' }} className="font-bold">
+
+          <div className="text-primary font-bold tracking-wide">
             Powered by DoorDash
           </div>
         </div>
 
-        {/* Copyright */}
-        <p className="text-xs text-gray-400">
-          © 2025 DoorDash Sweepstakes. All rights reserved.
+        <p className="text-xs opacity-50">
+          © 2026 DoorDash Sweepstakes. All rights reserved.
         </p>
       </div>
     </footer>

@@ -144,20 +144,19 @@ export function SocialProofNotifications() {
 
   return (
     <div className="fixed bottom-4 left-4 z-50">
-      <div 
-        className="w-60 md:w-70 h-16 md:h-20 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg shadow-lg p-3 md:p-4 animate-fade-in transition-all duration-2000"
+      <div
+        className="w-64 md:w-72 bg-card rounded-2xl shadow-floating border border-border/60 p-3 md:p-4"
         style={{
-          background: 'linear-gradient(135deg, #FF6B35, #F7931E)',
-          animation: 'fadeInSlide 2s ease-out, fadeOutSlide 2s ease-out 4s forwards'
+          animation: 'fadeInSlide 0.6s cubic-bezier(0.25,0.46,0.45,0.94), fadeOutSlide 0.6s ease-in 5.4s forwards'
         }}
       >
-        <div className="flex items-center justify-between h-full">
-          <div className="flex items-center space-x-2 flex-1 min-w-0">
-            <div className="flex-shrink-0">
-              <Truck className="h-4 w-4 md:h-5 md:w-5 text-white" />
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-3 flex-1 min-w-0">
+            <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Truck className="h-4 w-4 md:h-5 md:w-5 text-primary" />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-xs md:text-sm text-white font-medium leading-tight pr-2">
+              <p className="text-xs md:text-sm text-foreground font-medium leading-snug">
                 {currentNotification.message}
               </p>
             </div>
@@ -166,7 +165,7 @@ export function SocialProofNotifications() {
             variant="ghost"
             size="sm"
             onClick={handleClose}
-            className="p-1 h-auto hover:bg-white/20 text-white flex-shrink-0 ml-1"
+            className="p-1 h-auto hover:bg-muted text-muted-foreground flex-shrink-0"
           >
             <X className="h-3 w-3 md:h-4 md:w-4" />
           </Button>

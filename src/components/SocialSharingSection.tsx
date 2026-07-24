@@ -3,39 +3,35 @@ import { Share, MessageCircle, Facebook } from "lucide-react";
 
 export function SocialSharingSection() {
   return (
-    <section className="py-12 px-4 bg-gray-100">
+    <section className="py-16 px-4 bg-background">
       <div className="container max-w-md mx-auto text-center">
-        {/* Secure Entry Badge */}
-        <div className="flex items-center justify-center gap-2 mb-8 text-gray-500">
-          <div className="w-4 h-4 border border-gray-400 rounded"></div>
-          <span className="text-sm">Secure Entry</span>
-          <span className="text-red-500 font-bold">• DoorDash</span>
+        <div className="inline-flex items-center gap-2 mb-6 text-xs text-muted-foreground bg-muted px-3 py-1.5 rounded-full">
+          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+          Secure Entry · DoorDash
         </div>
 
-        {/* Section Header */}
-        <div className="mb-6">
-          <h2 className="text-2xl font-black text-gray-900 mb-2">
-            Boost Your Chances!
+        <div className="mb-8">
+          <h2 className="text-3xl font-black tracking-tight text-foreground mb-2">
+            Boost Your Chances
           </h2>
-          <p className="text-gray-600">
-            Share for bonus entries!
+          <p className="text-muted-foreground text-sm">
+            Share for bonus entries.
           </p>
         </div>
 
-        {/* Social Sharing Buttons */}
-        <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <Button className="bg-red-500 hover:bg-red-600 text-white font-bold py-4 rounded-xl">
-              <Share className="w-5 h-5 mr-2" />
+        <div className="space-y-3">
+          <div className="grid grid-cols-2 gap-3">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5">
+              <Share className="w-4 h-4 mr-2" />
               X (Twitter)
             </Button>
-            <Button className="bg-red-500 hover:bg-red-600 text-white font-bold py-4 rounded-xl">
-              <MessageCircle className="w-5 h-5 mr-2" />
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5">
+              <MessageCircle className="w-4 h-4 mr-2" />
               Instagram
             </Button>
           </div>
-          <Button className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-4 rounded-xl">
-            <Facebook className="w-5 h-5 mr-2" />
+          <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5">
+            <Facebook className="w-4 h-4 mr-2" />
             Facebook
           </Button>
         </div>
