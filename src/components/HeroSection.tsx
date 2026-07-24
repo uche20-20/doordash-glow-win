@@ -7,8 +7,8 @@ export function HeroSection() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center px-4 py-12 bg-background">
-      <div className="container max-w-md mx-auto text-center space-y-6 animate-fade-in">
+    <section className="min-h-screen flex flex-col justify-center px-4 py-10 bg-background">
+      <div className="container max-w-md mx-auto text-center space-y-5 animate-fade-in">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-muted text-xs font-semibold text-foreground/70 mx-auto">
           <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
           Limited-time sweepstakes
@@ -35,7 +35,7 @@ export function HeroSection() {
           Open to US, CA, UK, AU residents, 18+
         </p>
 
-        <div className="relative mt-8 rounded-2xl overflow-hidden shadow-floating">
+        <div className="relative mt-6 rounded-2xl overflow-hidden shadow-floating">
           <img
             src={heroImage}
             alt="Food delivery"

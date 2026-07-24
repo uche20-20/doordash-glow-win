@@ -25,9 +25,9 @@ export function StepsSection() {
   };
 
   return (
-    <section className="py-16 px-4 bg-muted">
+    <section className="py-14 px-4 bg-muted">
       <div className="container max-w-md mx-auto">
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <h2 className="text-3xl font-black tracking-tight text-foreground">
             Claim in <span className="text-primary">&lt; 5 minutes</span>
           </h2>
@@ -36,13 +36,13 @@ export function StepsSection() {
           </p>
         </div>
 
-        <div className="space-y-4 mb-8">
+        <div className="space-y-3 mb-6">
           {steps.map((step, index) => {
             const IconComponent = step.icon;
             return (
               <div
                 key={index}
-                className="bg-card rounded-2xl p-6 shadow-card border border-border/60 flex items-start gap-4 hover:shadow-floating hover:-translate-y-0.5 transition-all duration-300 animate-fade-in"
+                className="bg-card rounded-2xl p-5 shadow-card border border-border/60 flex items-start gap-4 hover:shadow-floating hover:-translate-y-0.5 transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
