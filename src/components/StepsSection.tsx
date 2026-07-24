@@ -6,23 +6,17 @@ const steps = [
     icon: Check,
     title: "Take the Survey",
     description: "Answer a quick survey about your food preferences.",
-    bgColor: "bg-red-50",
-    iconColor: "text-red-500"
   },
   {
     icon: Gift,
-    title: "Complete 4-5 Deals", 
+    title: "Complete 4-5 Deals",
     description: "Sign up for 4-5 offers from our partners.",
-    bgColor: "bg-red-50",
-    iconColor: "text-red-500"
   },
   {
     icon: DollarSign,
     title: "Get Rewarded",
     description: "Receive your $750 DoorDash voucher!",
-    bgColor: "bg-red-50",
-    iconColor: "text-red-500"
-  }
+  },
 ];
 
 export function StepsSection() {
@@ -31,50 +25,53 @@ export function StepsSection() {
   };
 
   return (
-    <section className="py-12 px-4 bg-gray-100">
+    <section className="py-16 px-4 bg-muted">
       <div className="container max-w-md mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-black mb-4" style={{ color: '#FF3008' }}>
-            Claim Your $750 Voucher in &lt;5 Minutes!
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-black tracking-tight text-foreground">
+            Claim in <span className="text-primary">&lt; 5 minutes</span>
           </h2>
+          <p className="text-muted-foreground mt-2 text-sm">
+            Three simple steps to your $750 voucher.
+          </p>
         </div>
 
-        {/* Steps */}
-        <div className="space-y-6 mb-8">
+        <div className="space-y-4 mb-8">
           {steps.map((step, index) => {
             const IconComponent = step.icon;
             return (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm border">
-                {/* Icon Background Circle */}
-                <div className={`w-16 h-16 ${step.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <IconComponent className={`w-8 h-8 ${step.iconColor}`} />
+              <div
+                key={index}
+                className="bg-card rounded-2xl p-6 shadow-card border border-border/60 flex items-start gap-4 hover:shadow-floating hover:-translate-y-0.5 transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <IconComponent className="w-6 h-6 text-primary" />
                 </div>
-                
-                {/* Step Number */}
-                <div className="flex items-center justify-center w-8 h-8 bg-red-500 text-white rounded-full font-black text-sm mx-auto mb-4">
-                  {index + 1}
+                <div className="flex-1 text-left">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-bold text-primary">
+                      STEP {index + 1}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-1">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
-                
-                {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-center text-sm leading-relaxed">
-                  {step.description}
-                </p>
               </div>
             );
           })}
         </div>
 
-        {/* CTA Section */}
         <div className="text-center">
           <Button
             onClick={handleCTAClick}
-            className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-black text-lg py-6 h-auto rounded-2xl transition-all duration-200"
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base py-6 h-auto rounded-2xl shadow-glow hover:shadow-floating transition-all duration-300 hover:-translate-y-0.5"
           >
-            Start Now
+            Start Now →
           </Button>
         </div>
       </div>
