@@ -1,7 +1,7 @@
 export function FooterSection() {
   return (
-    <footer className="py-10 px-4 bg-foreground text-background">
-      <div className="container max-w-md mx-auto text-center space-y-6">
+    <footer className="py-8 px-4 bg-foreground text-background">
+      <div className="container max-w-md mx-auto text-center space-y-5">
         <p className="text-xs leading-relaxed opacity-80">
           US, CA, UK, AU residents, 18+. Ends July 26, 2026. No purchase needed. Void where prohibited. Odds of winning depend on number of eligible entries received. One grand prize winner will be selected.
         </p>

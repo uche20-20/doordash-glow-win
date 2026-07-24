@@ -3,14 +3,14 @@ import { Share, MessageCircle, Facebook } from "lucide-react";
 
 export function SocialSharingSection() {
   return (
-    <section className="py-16 px-4 bg-background">
+    <section className="py-14 px-4 bg-background">
       <div className="container max-w-md mx-auto text-center">
-        <div className="inline-flex items-center gap-2 mb-6 text-xs text-muted-foreground bg-muted px-3 py-1.5 rounded-full">
+        <div className="inline-flex items-center gap-2 mb-5 text-xs text-muted-foreground bg-muted px-3 py-1.5 rounded-full">
           <span className="w-1.5 h-1.5 rounded-full bg-primary" />
           Secure Entry · DoorDash
         </div>
 
-        <div className="mb-8">
+        <div className="mb-6">
           <h2 className="text-3xl font-black tracking-tight text-foreground mb-2">
             Boost Your Chances
           </h2>
