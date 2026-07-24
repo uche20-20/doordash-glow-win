@@ -6,66 +6,62 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 100%;              /* #FFFFFF */
+    --foreground: 0 0% 6.7%;              /* #111111 */
 
-    /* DoorDash Brand Colors - Official Reds Only */
-    --doordash-red: 11 100% 52%;      /* #FF3008 */
-    --doordash-red-dark: 349 78% 42%; /* #C8102E */
+    /* Brand */
+    --doordash-red: 355 75% 56%;          /* #E63946 warm red */
+    --doordash-red-dark: 355 70% 46%;
     --doordash-white: 0 0% 100%;
-    
-    /* Primary Colors */
-    --primary: 11 100% 52%;
+
+    --primary: 355 75% 56%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 11 100% 62%;
+    --primary-glow: 355 85% 66%;
 
-    /* Secondary Colors - Using darker red instead of orange */
-    --secondary: 349 78% 42%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 349 78% 52%;
+    --secondary: 0 0% 96.9%;              /* #F7F7F7 soft gray */
+    --secondary-foreground: 0 0% 6.7%;
+    --secondary-glow: 355 70% 46%;
 
-    /* Background Gradients - Red spectrum only */
     --gradient-primary: linear-gradient(135deg, hsl(var(--doordash-red)), hsl(var(--doordash-red-dark)));
-    --gradient-hero: linear-gradient(180deg, hsl(var(--doordash-red)) 0%, hsl(var(--doordash-red-dark)) 100%);
-    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary-glow) / 0.3) 0%, transparent 70%);
+    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 96.9%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--primary-glow) / 0.25) 0%, transparent 70%);
 
-    /* Card & Components */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 6.7%;
     --card-glow: 0 0% 100% / 0.1;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 6.7%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96.9%;                  /* #F7F7F7 */
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 349 78% 52%;
+    --accent: 355 75% 56%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 14 100% 57%;
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 355 75% 56%;
 
     /* Glow Effects */
-    --glow-primary: 0 0 20px hsl(var(--primary) / 0.5);
-    --glow-secondary: 0 0 20px hsl(var(--secondary) / 0.5);
-    --glow-intense: 0 0 40px hsl(var(--primary) / 0.7);
-    
-    /* Shadows */
-    --shadow-glow: 0 10px 30px -5px hsl(var(--primary) / 0.3);
-    --shadow-floating: 0 20px 40px -10px hsl(var(--primary) / 0.2);
+    --glow-primary: 0 8px 24px hsl(var(--primary) / 0.25);
+    --glow-secondary: 0 8px 24px hsl(0 0% 0% / 0.06);
+    --glow-intense: 0 12px 40px hsl(var(--primary) / 0.35);
+
+    /* Shadows - modern soft */
+    --shadow-glow: 0 10px 30px -12px hsl(var(--primary) / 0.35);
+    --shadow-floating: 0 20px 45px -20px hsl(0 0% 0% / 0.15), 0 8px 20px -8px hsl(0 0% 0% / 0.08);
+    --shadow-card: 0 4px 16px -4px hsl(0 0% 0% / 0.08), 0 2px 6px -2px hsl(0 0% 0% / 0.04);
 
     /* Animations */
     --transition-glow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 0.5rem;
+    --radius: 1.125rem;                   /* 18px rounded cards */
 
-    /* Custom gradient background sizes for animations */
     --bg-size: 200% 200%;
 
     --sidebar-background: 0 0% 98%;
