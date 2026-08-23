@@ -15,7 +15,7 @@ const steps = [
   {
     icon: DollarSign,
     title: "Get Rewarded",
-    description: "Receive your $750 DoorDash voucher!",
+    description: "Receive your $500 DoorDash voucher!",
   },
 ];
 
@@ -32,7 +32,7 @@ export function StepsSection() {
             Claim in <span className="text-primary">&lt; 5 minutes</span>
           </h2>
           <p className="text-muted-foreground mt-2 text-sm">
-            Three simple steps to your $750 voucher.
+            Three simple steps to your $500 voucher.
           </p>
         </div>
 
