@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   const handleCTAClick = () => {
-    window.open("https://trksy.org/aff_c?offer_id=1164&aff_id=31368", "_blank");
+    window.open("https://trksy.org/aff_c?offer_id=3463&aff_id=31368", "_blank");
   };
 
   const steps = [

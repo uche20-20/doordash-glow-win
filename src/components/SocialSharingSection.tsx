@@ -1,7 +1,7 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { toast } from "sonner";
 
-const SHARE_URL = "https://trksy.org/aff_c?offer_id=1164&aff_id=31368";
+const SHARE_URL = "https://trksy.org/aff_c?offer_id=3463&aff_id=31368";
 const SHARE_TEXT = "I just claimed my DoorDash reward! Grab yours before it ends:";
 
 function openShare(url: string) {
