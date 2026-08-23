@@ -20,7 +20,7 @@ export function HeroSection() {
             Exclusive Reward
           </span>
           <h1 className="text-4xl sm:text-5xl font-black leading-[1.05] tracking-tight text-foreground">
-            Claim Your <span className="text-primary">$750</span> DoorDash Reward
+            Claim Your <span className="text-primary">$500</span> DoorDash Reward
           </h1>
           <p className="text-base text-muted-foreground leading-relaxed">
             Complete the required steps below to continue toward your reward.
@@ -33,7 +33,7 @@ export function HeroSection() {
               DoorDash Reward
             </p>
             <p className="text-5xl sm:text-6xl font-black text-foreground tracking-tight">
-              $750
+              $500
             </p>
             <p className="text-xs font-bold tracking-[0.15em] text-primary uppercase">
               Digital Reward
