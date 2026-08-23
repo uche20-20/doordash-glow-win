@@ -8,7 +8,7 @@ export function HeroSection() {
   const steps = [
     'Tap "Start now"',
     "Enter your information",
-    "Complete the required sponsored activities",
+    "Complete 4-5 sponsored deals",
     "Follow the instructions provided to continue",
   ];
 
